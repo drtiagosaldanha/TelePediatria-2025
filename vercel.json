@@ -1,14 +1,10 @@
-
 {
   "functions": {
     "api/**/*.ts": {
-      "runtime": "edge"
+      "runtime": "nodejs18"
     }
   },
   "rewrites": [
-    {
-      "source": "/api/:match*",
-      "destination": "/api/:match*"
-    }
+    { "source": "/api/:match*", "destination": "/api/:match*" }
   ]
 }
