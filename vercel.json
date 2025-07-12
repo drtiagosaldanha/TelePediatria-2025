@@ -1,1 +1,20 @@
-
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "SUPABASE_URL": "@supabase_url",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key",
+    "SUPABASE_ANON_KEY": "@supabase_anon_key"
+  },
+  "rewrites": [
+    { "source": "/api/:match*", "destination": "/api/:match*" }
+  ],
+  "routes": [
+    { "src": "/api/agendamento", "dest": "/api/agendamento.ts" },
+    { "src": "/api/payment-confirm", "dest": "/api/payment-confirm.ts" }
+  ]
+}
